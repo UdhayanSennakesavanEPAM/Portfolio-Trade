@@ -1,17 +1,26 @@
 
-# Portfolio Trade Compliance Checker
+# Portfolio Trade Order Compliance & Execution Checker
 
-A simple Python program that checks proposed Buy and Sell trades against portfolio rules.
+A Python application that validates proposed portfolio trades before execution based on predefined compliance rules.
 
 ## Features
-- Checks trade quantity and price.
-- Validates restricted securities.
-- Checks available holdings and cash balance.
-- Calculates maximum position concentration.
+- Validates trade quantity, price and action.
+- Checks restricted securities.
+- Verifies sufficient holdings for Sell orders.
+- Checks available cash for Buy orders.
+- Calculates position concentration for Buy orders.
 - Returns Approved, Rejected, or Needs Manual Sign-off with a reason.
 
 ## Input
-Portfolio reference data and proposed trades.
+- Proposed trades from `trades_test.csv`.
+- Portfolio reference data containing cash balance, restricted securities, maximum position percentage and current holdings.
 
 ## Output
-Trade compliance decisions and reasons for each trade.
+A compliance decision and reason for each proposed trade.
+
+## How to Run
+Run the Python file:
+
+```bash
+python main.py
+```
